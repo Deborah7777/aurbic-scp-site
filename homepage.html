@@ -658,7 +658,12 @@
     .portfolio-item__bg {
       position: absolute;
       inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
       transition: transform 0.7s var(--ease-out);
+      background: #4A2C1A;
     }
 
     /* Placeholder backgrounds with patterns */
@@ -1585,7 +1590,7 @@
 
       <div class="portfolio__grid reveal">
         <div class="portfolio-item portfolio-item--large" data-cat="architecture">
-          <div class="portfolio-item__bg"></div>
+          <img class="portfolio-item__bg" src="images/centre-administratif-niamey.svg" alt="Centre Administratif de Niamey" />
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
             <svg viewBox="0 0 200 200" fill="none">
@@ -1606,7 +1611,7 @@
         </div>
 
         <div class="portfolio-item" data-cat="urbanisme">
-          <div class="portfolio-item__bg"></div>
+          <img class="portfolio-item__bg" src="images/plan-directeur-agadez.svg" alt="Plan Directeur d'Agadez" />
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
             <svg viewBox="0 0 120 120" fill="none">
@@ -1628,7 +1633,7 @@
         </div>
 
         <div class="portfolio-item" data-cat="architecture">
-          <div class="portfolio-item__bg"></div>
+          <img class="portfolio-item__bg" src="images/villa-harmattan.svg" alt="Villa Harmattan" />
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
             <svg viewBox="0 0 120 120" fill="none">
@@ -1648,7 +1653,7 @@
         </div>
 
         <div class="portfolio-item" data-cat="ingenierie">
-          <div class="portfolio-item__bg"></div>
+          <img class="portfolio-item__bg" src="images/pont-dosso.svg" alt="Pont Dosso" />
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
             <svg viewBox="0 0 120 80" fill="none">
@@ -1667,7 +1672,7 @@
         </div>
 
         <div class="portfolio-item" data-cat="architecture">
-          <div class="portfolio-item__bg"></div>
+          <img class="portfolio-item__bg" src="images/complexe-tahoua.svg" alt="Complexe Tahoua" />
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
             <svg viewBox="0 0 120 80" fill="none">
@@ -2025,5 +2030,4 @@
 
 </body>
 </html>
-
 
