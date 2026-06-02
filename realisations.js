@@ -46,14 +46,19 @@ const projects = [
   },
   {
     id: 4,
-    title: "Hôpital Cure",
+    title: "Projet Hôpital CURE",
     category: ["ingenierie", "institutionnel"],
     location: "Niamey, Niger",
     year: 2023,
     image: "images/HopitalCure/Cure01.JPG",
-    description: "Infrastructure hospitalière moderne avec bloc opératoire, maternité et services de diagnostic. Respect des normes sanitaires internationales.",
-    fullDescription: "Centre hospitalier de 200 lits incluant bloc opératoire de classe A, maternité, imagerie médicale et laboratoires. Conçu selon les standards WHO avec systèmes de secours d'urgence redondants et gestion des déchets biomédicaux.",
-    images: ["images/HopitalCure/Cure01.JPG", "images/HopitalCure/Cure02.JPG"],
+    description: "Participation aux travaux de construction et développement des infrastructures du complexe hospitalier CURE.",
+    fullDescription: "Participation technique et de coordination sur le complexe hospitalier CURE. Le projet comprend blocs opératoires, maternité, services de diagnostic et unités de soins. Notre intervention a porté sur l'expertise technique, la coordination des travaux et l'assurance qualité architecturale pour livrer une infrastructure de santé performante et résiliente. Principales contributions :\n- Expertise technique et suivis d'exécution\n- Coordination interdisciplinaire des corps de métier\n- Contribution à une infrastructure de santé répondant aux normes internationales\n- Qualité architecturale et confort patient (ventilation naturelle, circuits fluides, accessibilité)",
+    images: [
+      "images/HopitalCure/Cure01.JPG",
+      "images/HopitalCure/Cure02.JPG",
+      "images/HopitalCure/Cure03.JPG",
+      "images/HopitalCure/Cure05.JPG"
+    ],
     budget: "2,500 M XOF",
     surface: "12,000 m²",
     client: "Ministère de la Santé"
@@ -85,28 +90,59 @@ const projects = [
     budget: "1,000 M XOF",
     surface: "4,800 m²",
     client: "Société Guéno SARL"
+  },
+  {
+    id: 7,
+    title: "Salle de Classe en Matériaux Locaux – FSSP",
+    category: ["architecture", "institutionnel"],
+    location: "Niamey, Niger",
+    year: 2025,
+    image: "images/FSSP/FSSP01.JPG",
+    description: "Salle de classe durable conçue en matériaux locaux pour le Fonds de Solidarité pour la Sauvegarde de la Patrie.",
+    fullDescription: "Projet de salle de classe de 420 m² réalisé dans le quartier NY 2000 de Niamey. Le bâtiment mise sur des matériaux locaux et des techniques de construction écologique afin de réduire l'empreinte carbone, améliorer le confort thermique et renforcer le lien avec l'identité locale. Le programme inclut des espaces pédagogiques flexibles, une ventilation naturelle optimisée et des finitions adaptées au climat sahélien.",
+    images: ["images/FSSP/FSSP01.JPG", "images/FSSP/FSSP02.JPG", "images/FSSP/FSSP03.JPG"],
+    budget: "120 M XOF",
+    surface: "420 m²",
+    client: "Fonds de Solidarité pour la Sauvegarde de la Patrie"
+  }
+  ,
+  {
+    id: 8,
+    title: "Espace Réservé — Projets à venir",
+    category: ["coming-soon"],
+    location: "À venir",
+    year: "—",
+    image: "images/centre-administratif-niamey.svg",
+    description: "Espace réservé pour nos projets en développement. Bientôt plus d'informations et de visuels.",
+    fullDescription: "Projets en cours de développement, maquettes et études. Revenez bientôt pour découvrir nos prochaines réalisations.",
+    images: ["images/centre-administratif-niamey.svg"],
+    budget: "—",
+    surface: "—",
+    client: "—"
   }
 ];
 
 // =============================================
 // GESTION DE LA NAVBAR
 // =============================================
-const navbar = document.getElementById('navbar');
+(function(){
+  // NAVBAR handling scoped to this module
+  const navbar = document.getElementById('navbar');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  });
 
-// Mobile menu toggle
-const burger = document.getElementById('burger');
-const navbarLinks = document.querySelector('.navbar__links');
-burger?.addEventListener('click', () => {
-  navbarLinks?.classList.toggle('active');
-});
+  // Mobile menu toggle
+  const burger = document.getElementById('burger');
+  const navbarLinks = document.querySelector('.navbar__links');
+  burger?.addEventListener('click', () => {
+    navbarLinks?.classList.toggle('active');
+  });
 
 // =============================================
 // INITIALISATION DES PROJETS
@@ -254,6 +290,9 @@ function closeModal() {
   document.body.style.overflow = 'auto';
 }
 
+// Expose closeModal for inline onclick handlers used in generated HTML
+window.closeModal = closeModal;
+
 // Fermer la modal en cliquant sur l'overlay ou le bouton de fermeture
 modalOverlay?.addEventListener('click', closeModal);
 modalClose?.addEventListener('click', closeModal);
@@ -269,3 +308,5 @@ document.addEventListener('keydown', (e) => {
 // INITIALISATION
 // =============================================
 renderProjects();
+
+})();

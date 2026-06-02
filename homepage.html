@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AURBIC SCP — Cabinet d'Architecture, Urbanisme & Ingénierie au Niger</title>
   <meta name="description" content="Cabinet AURBIC SCP, spécialisé en architecture, urbanisme, ingénierie et coordination de projets BTP au Niger et en Afrique subsaharienne." />
+  <meta name="robots" content="index, follow" />
   <meta property="og:title" content="AURBIC SCP — Architecture & Urbanisme" />
   <meta property="og:description" content="Cabinet nigérien d'architecture, urbanisme, ingénierie et BTP." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="realisations.css" />
   <style>
     /* =============================================
        DESIGN TOKENS — AURBIC SCP
@@ -467,7 +469,8 @@
 
     .services__grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
       border-top: 1px solid rgba(60,42,33,0.1);
       border-left: 1px solid rgba(60,42,33,0.1);
     }
@@ -477,11 +480,30 @@
       border-right: 1px solid rgba(60,42,33,0.1);
       border-bottom: 1px solid rgba(60,42,33,0.1);
       position: relative;
-      transition: background var(--transition);
+      transition: transform 0.35s var(--ease-out), background var(--transition), box-shadow var(--transition);
       overflow: hidden;
     }
 
-    .service-card:hover { background: var(--sand); }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 96px;
+      height: 96px;
+      border-radius: 26px;
+      background: radial-gradient(circle at 30% 30%, rgba(161,88,67,0.16), transparent 52%);
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    .service-card__icon { position: relative; z-index: 1; }
+
+    .service-card:hover {
+      background: var(--sand);
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(60,42,33,0.12);
+    }
 
     .service-card__num {
       font-family: var(--font-display);
@@ -1294,141 +1316,6 @@
       color: rgba(244,235,208,0.25);
       transition: color var(--transition);
     }
-    .partner:hover { color: rgba(244,235,208,0.6); }
-
-    /* =============================================
-       CONTACT CTA
-    ============================================= */
-    .contact-cta {
-      background: var(--brick);
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-cta__geo {
-      position: absolute;
-      right: -60px;
-      top: -60px;
-      width: 300px;
-      height: 300px;
-      border: 1px solid rgba(244,235,208,0.12);
-    }
-
-    .contact-cta__geo2 {
-      position: absolute;
-      right: -20px;
-      top: -20px;
-      width: 300px;
-      height: 300px;
-      border: 1px solid rgba(244,235,208,0.06);
-    }
-
-    .contact-cta__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      z-index: 2;
-    }
-
-    .contact-cta__title {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 3.5vw, 48px);
-      font-weight: 300;
-      color: var(--sand);
-      margin-bottom: 12px;
-    }
-
-    .contact-cta__sub {
-      color: rgba(244,235,208,0.6);
-      font-size: 13px;
-      font-weight: 300;
-    }
-
-    .contact-cta__actions {
-      display: flex;
-      gap: 16px;
-      flex-shrink: 0;
-    }
-
-    /* =============================================
-       FOOTER
-    ============================================= */
-    .footer {
-      background: #291A13;
-      color: var(--sand);
-    }
-
-    .footer__main {
-      padding: 72px 0 56px;
-      display: grid;
-      grid-template-columns: 280px 1fr 1fr 1fr;
-      gap: 56px;
-      border-bottom: 1px solid rgba(244,235,208,0.06);
-    }
-
-    .footer__brand-logo {
-      font-family: var(--font-display);
-      font-size: 22px;
-      font-weight: 400;
-      letter-spacing: 4px;
-      color: var(--sand);
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .footer__brand-sub {
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      margin-bottom: 20px;
-    }
-
-    .footer__brand-desc {
-      font-size: 12px;
-      line-height: 1.8;
-      color: rgba(244,235,208,0.35);
-      font-weight: 300;
-      margin-bottom: 24px;
-    }
-
-    .footer__social {
-      display: flex;
-      gap: 12px;
-    }
-
-    .footer__social-link {
-      width: 32px;
-      height: 32px;
-      border: 1px solid rgba(244,235,208,0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: rgba(244,235,208,0.4);
-      transition: var(--transition);
-    }
-    .footer__social-link:hover {
-      border-color: var(--terracotta);
-      color: var(--terracotta);
-    }
-
-    .footer__col-title {
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(244,235,208,0.4);
-      margin-bottom: 24px;
-    }
-
-    .footer__col-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
 
     .footer__col-links a {
       font-size: 13px;
@@ -1523,6 +1410,21 @@
       .navbar__inner { padding: 0 20px; }
       .navbar__links, .navbar__cta { display: none; }
       .navbar__burger { display: flex; }
+      .navbar.open .navbar__links {
+        display: flex;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(60,42,33,0.96);
+        flex-direction: column;
+        padding: 18px 24px 24px;
+        gap: 18px;
+        border-top: 1px solid rgba(244,235,208,0.08);
+      }
+      .navbar.open .navbar__links li { width: 100%; }
+      .navbar.open .navbar__links a { color: var(--sand); }
+      .navbar.open .navbar__links a::after { width: 0; }
 
       .hero__content { padding: 0 20px 60px; flex-direction: column; align-items: flex-start; gap: 40px; }
       .hero__stats { flex-direction: row; align-items: flex-start; }
@@ -1568,7 +1470,7 @@
   ============================================= -->
   <nav class="navbar" id="navbar">
     <div class="navbar__inner">
-      <a href="/" class="navbar__logo">
+      <a href="./" class="navbar__logo">
         AURBIC SCP
         <span>Architecture · Urbanisme · Ingénierie</span>
       </a>
@@ -1585,7 +1487,7 @@
         Devis gratuit
       </button>
 
-      <button class="navbar__burger" id="burger" aria-label="Menu">
+      <button class="navbar__burger" id="burger" aria-label="Menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -1662,11 +1564,11 @@
     <div class="container">
       <div class="services__header reveal">
         <div>
-          <span class="section-tag">Nos domaines d'expertise</span>
-          <h2 class="section-title">Une offre intégrée<br>pour tous vos projets</h2>
+          <span class="section-tag">Notre expertise</span>
+          <h2 class="section-title">Un savoir-faire complet<br>pour des réalisations durables</h2>
         </div>
         <a href="#services" class="services__link">
-          Voir tous nos services →
+          Voir notre expertise →
         </a>
       </div>
 
@@ -1724,14 +1626,45 @@
         <div class="service-card reveal" style="--i:3">
           <div class="service-card__num">04</div>
           <svg class="service-card__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.2"/>
-            <path d="M20 4 L20 20 L32 26" stroke="currentColor" stroke-width="1"/>
-            <circle cx="20" cy="20" r="2.5" fill="currentColor"/>
-            <line x1="20" y1="4" x2="20" y2="6" stroke="currentColor" stroke-width="2"/>
-            <line x1="36" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="2"/>
+            <rect x="8" y="8" width="24" height="24" rx="4" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M12 22 L18 16 L28 26" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M12 26 L20 18 L28 26" stroke="currentColor" stroke-width="1.2"/>
           </svg>
-          <h3 class="service-card__title">Coordination BTP</h3>
-          <p class="service-card__desc">Pilotage complet de chantiers, coordination des corps de métier, suivi budgétaire, contrôle qualité et réception de travaux.</p>
+          <h3 class="service-card__title">Construction durable</h3>
+          <p class="service-card__desc">Accompagnement écoresponsable, matériaux locaux et solutions basse consommation pour des bâtiments performants et résilients.</p>
+          <span class="service-card__arrow">En savoir plus →</span>
+          <div class="service-card__bar"></div>
+        </div>
+
+        <!-- Service 05 -->
+        <div class="service-card reveal" style="--i:4">
+          <div class="service-card__num">05</div>
+          <svg class="service-card__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="8" y="12" width="24" height="16" rx="4" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="12" y1="18" x2="28" y2="18" stroke="currentColor" stroke-width="0.8"/>
+            <line x1="12" y1="24" x2="28" y2="24" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M10 12 L20 4 L30 12" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <h3 class="service-card__title">Construction en terre</h3>
+          <p class="service-card__desc">Techniques de terre crue, adobe et pisé pour des ouvrages climatiques, économiques et profondément enracinés dans le territoire.</p>
+          <span class="service-card__arrow">En savoir plus →</span>
+          <div class="service-card__bar"></div>
+        </div>
+
+        <!-- Service 06 -->
+        <div class="service-card reveal" style="--i:5">
+          <div class="service-card__num">06</div>
+          <svg class="service-card__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="20" y1="8" x2="20" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="8" y1="20" x2="32" y2="20" stroke="currentColor" stroke-width="1"/>
+            <circle cx="20" cy="8" r="2" fill="currentColor"/>
+            <circle cx="20" cy="32" r="2" fill="currentColor"/>
+            <circle cx="8" cy="20" r="2" fill="currentColor"/>
+            <circle cx="32" cy="20" r="2" fill="currentColor"/>
+          </svg>
+          <h3 class="service-card__title">Coordination de projets</h3>
+          <p class="service-card__desc">Pilotage de planning, maîtrise des intervenants et contrôle qualité pour des chantiers fluides et maîtrisés.</p>
           <span class="service-card__arrow">En savoir plus →</span>
           <div class="service-card__bar"></div>
         </div>
@@ -2038,23 +1971,25 @@
           </div>
         </div>
 
-        <div class="portfolio-item" data-cat="ingenierie">
+        <div class="portfolio-item portfolio-item--large" data-cat="ingenierie">
           <div class="portfolio-item__gallery">
-            <img src="images/HopitalCure/Cure01.JPG" alt="Hôpital Cure" />
-            <img src="images/HopitalCure/Cure02.JPG" alt="Hôpital Cure" />
+            <img src="images/HopitalCure/Cure01.JPG" alt="Projet Hôpital CURE" />
+            <img src="images/HopitalCure/Cure03.JPG" alt="Projet Hôpital CURE" />
+            <img src="images/HopitalCure/Cure02.JPG" alt="Projet Hôpital CURE" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
-            <svg viewBox="0 0 120 80" fill="none">
-              <path d="M10 60 Q30 20 60 20 Q90 20 110 60" stroke="rgba(244,235,208,0.6)" stroke-width="1.2"/>
-              <line x1="10" y1="60" x2="110" y2="60" stroke="rgba(244,235,208,0.4)" stroke-width="0.8"/>
-              <line x1="60" y1="20" x2="60" y2="60" stroke="rgba(139,69,19,0.6)" stroke-width="0.8"/>
+            <svg viewBox="0 0 200 140" fill="none">
+              <rect x="20" y="60" width="160" height="70" stroke="rgba(244,235,208,0.6)" stroke-width="1"/>
+              <path d="M20 60 L100 20 L180 60" stroke="rgba(244,235,208,0.6)" stroke-width="1"/>
+              <rect x="80" y="100" width="40" height="40" stroke="rgba(244,235,208,0.4)" stroke-width="0.8"/>
             </svg>
           </div>
           <div class="portfolio-item__overlay"></div>
           <div class="portfolio-item__info">
             <p class="portfolio-item__cat">Santé · Infrastructure</p>
-            <h3 class="portfolio-item__title">Hôpital Cure</h3>
+            <h3 class="portfolio-item__title">Projet Hôpital CURE</h3>
+            <p class="portfolio-item__lead">Expertise technique · Coordination des travaux · Qualité architecturale</p>
             <p class="portfolio-item__year">2023 · Niamey, Niger</p>
             <a href="#" class="portfolio-item__link">Voir le projet →</a>
           </div>
@@ -2083,6 +2018,30 @@
             <a href="#" class="portfolio-item__link">Voir le projet →</a>
           </div>
         </div>
+
+        <div class="portfolio-item" data-cat="architecture">
+          <div class="portfolio-item__gallery">
+            <img src="images/Ecole/Ecole02.jpg" alt="Salle de Classe en Matériaux Locaux – FSSP" />
+            <img src="images/Ecole/Ecole01.JPG" alt="Salle de Classe en Matériaux Locaux – FSSP" />
+          </div>
+          <div class="portfolio-item__pattern"></div>
+          <div class="portfolio-item__arch">
+            <svg viewBox="0 0 120 80" fill="none">
+              <rect x="10" y="20" width="100" height="50" stroke="rgba(244,235,208,0.5)" stroke-width="1"/>
+              <rect x="20" y="30" width="20" height="25" stroke="rgba(244,235,208,0.3)" stroke-width="0.7"/>
+              <rect x="50" y="30" width="20" height="25" stroke="rgba(244,235,208,0.3)" stroke-width="0.7"/>
+              <rect x="80" y="30" width="20" height="25" stroke="rgba(244,235,208,0.3)" stroke-width="0.7"/>
+              <line x1="10" y1="20" x2="110" y2="20" stroke="rgba(139,69,19,0.6)" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="portfolio-item__overlay"></div>
+          <div class="portfolio-item__info">
+            <p class="portfolio-item__cat">Architecture · Éducation</p>
+            <h3 class="portfolio-item__title">Salle de Classe en Matériaux Locaux – FSSP</h3>
+            <p class="portfolio-item__year">2025 · Niamey, Niger</p>
+            <a href="#" class="portfolio-item__link">Voir le projet →</a>
+          </div>
+        </div>
       </div>
 
       <div style="text-align:center; margin-top:48px;" class="reveal">
@@ -2098,24 +2057,24 @@
     <div class="container">
       <div class="stats__grid">
         <div class="stat-card reveal" style="--i:0">
-          <div class="stat-card__num">150+</div>
+          <div class="stat-card__num" data-target="150" data-suffix="+">150+</div>
           <div class="stat-card__label">Projets réalisés</div>
           <div class="stat-card__desc">Résidentiel, institutionnel, commercial, infrastructure</div>
         </div>
         <div class="stat-card reveal" style="--i:1">
-          <div class="stat-card__num">18</div>
-          <div class="stat-card__label">Années d'expertise</div>
+          <div class="stat-card__num" data-target="18">18</div>
+          <div class="stat-card__label">Années d'expérience</div>
           <div class="stat-card__desc">Fondé en 2007 à Niamey</div>
         </div>
         <div class="stat-card reveal" style="--i:2">
-          <div class="stat-card__num">12</div>
-          <div class="stat-card__label">Pays d'intervention</div>
-          <div class="stat-card__desc">Niger et Afrique subsaharienne</div>
+          <div class="stat-card__num" data-target="130" data-suffix="+">130+</div>
+          <div class="stat-card__label">Clients satisfaits</div>
+          <div class="stat-card__desc">Projets livrés avec excellence et confiance</div>
         </div>
         <div class="stat-card reveal" style="--i:3">
-          <div class="stat-card__num">40+</div>
-          <div class="stat-card__label">Professionnels</div>
-          <div class="stat-card__desc">Architectes, ingénieurs, urbanistes</div>
+          <div class="stat-card__num" data-target="12">12</div>
+          <div class="stat-card__label">Chantiers en cours</div>
+          <div class="stat-card__desc">Suivi de chantier actif et coordination BTP</div>
         </div>
       </div>
     </div>
@@ -2348,6 +2307,18 @@
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
+    const burger = document.getElementById('burger');
+    if (burger) {
+      burger.addEventListener('click', () => {
+        const isOpen = navbar.classList.toggle('open');
+        burger.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+
+    document.querySelectorAll('.navbar__links a').forEach(link => {
+      link.addEventListener('click', () => navbar.classList.remove('open'));
+    });
+
     // Scroll reveal
     const revealEls = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
@@ -2361,25 +2332,39 @@
 
     revealEls.forEach(el => observer.observe(el));
 
-    // Portfolio filters
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const statCounters = document.querySelectorAll('.stat-card__num[data-target]');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = Number(counter.dataset.target || 0);
+          const suffix = counter.dataset.suffix || '';
+          let current = 0;
+          const duration = 1200;
+          const stepTime = Math.max(duration / target, 20);
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        portfolioItems.forEach(item => {
-          if (filter === 'all' || item.dataset.cat === filter) {
-            item.style.display = '';
-          } else {
-            item.style.display = 'none';
-          }
-        });
+          const timer = setInterval(() => {
+            current += Math.ceil(target / (duration / stepTime));
+            if (current >= target) {
+              counter.textContent = `${target}${suffix}`;
+              clearInterval(timer);
+            } else {
+              counter.textContent = `${current}${suffix}`;
+            }
+          }, stepTime);
+
+          counterObserver.unobserve(counter);
+        }
       });
-    });
+    }, { threshold: 0.4 });
+    statCounters.forEach(counter => counterObserver.observe(counter));
 
+    // Dynamic realisations script inclusion
+  </script>
+
+  <script src="realisations.js"></script>
+
+  <script>
     // Testimonials carousel
     const testimonials = document.querySelectorAll('.testimonial');
     const counterEl = document.querySelector('.testimonials__counter');
@@ -2422,4 +2407,3 @@
 
 </body>
 </html>
-
