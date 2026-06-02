@@ -940,6 +940,37 @@
         repeating-linear-gradient(45deg, rgba(244,235,208,0.04) 0px, rgba(244,235,208,0.04) 1px, transparent 1px, transparent 24px);
     }
 
+    .portfolio-item__gallery {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 2px;
+    }
+
+    .portfolio-item__gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .portfolio-item__gallery img:nth-child(1) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+
+    .portfolio-item__gallery img:nth-child(2) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    .portfolio-item__gallery img:nth-child(3) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
     /* Architectural line drawing simulation */
     .portfolio-item__arch {
       position: absolute;
@@ -1884,6 +1915,7 @@
        PORTFOLIO
   ============================================= -->
   <section class="portfolio" id="portfolio">
+    <div id="realisations"></div>
     <div class="container">
       <div class="portfolio__header reveal">
         <div>
@@ -1899,10 +1931,11 @@
       </div>
 
       <div class="portfolio__grid reveal">
-        <div class="portfolio-item portfolio-item--large" data-cat="architecture">
+        <div class="portfolio-item portfolio-item--large" data-cat="architecture" data-project-id="ecole-moderne-niamey">
           <div class="portfolio-item__gallery">
             <img src="images/Ecole/Ecole01.JPG" alt="École moderne - AURBIC SCP" />
             <img src="images/Ecole/Ecole02.jpg" alt="École moderne - AURBIC SCP" />
+            <img src="images/Ecole/Ecole01.JPG" alt="École moderne - AURBIC SCP" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
@@ -1919,14 +1952,15 @@
             <p class="portfolio-item__cat">Architecture · Institutionnel</p>
             <h3 class="portfolio-item__title">École moderne de Niamey</h3>
             <p class="portfolio-item__year">2023 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
+            <a href="project.html?id=ecole-moderne-niamey" class="portfolio-item__link">Voir le projet →</a>
           </div>
         </div>
 
-        <div class="portfolio-item" data-cat="urbanisme">
+        <div class="portfolio-item" data-cat="urbanisme" data-project-id="internat-jeunes-filles">
           <div class="portfolio-item__gallery">
             <img src="images/Internat%20des%20jeunes%20filles/Inter01.jpeg" alt="Internat des jeunes filles" />
             <img src="images/Internat%20des%20jeunes%20filles/Inter02.jpg" alt="Internat des jeunes filles" />
+            <img src="images/Internat%20des%20jeunes%20filles/Inter01.jpeg" alt="Internat des jeunes filles" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
@@ -1944,14 +1978,15 @@
             <p class="portfolio-item__cat">Éducation · Internat</p>
             <h3 class="portfolio-item__title">Internat des jeunes filles</h3>
             <p class="portfolio-item__year">2024 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
+            <a href="project.html?id=internat-jeunes-filles" class="portfolio-item__link">Voir le projet →</a>
           </div>
         </div>
 
-        <div class="portfolio-item" data-cat="architecture">
+        <div class="portfolio-item" data-cat="architecture" data-project-id="residence-abba">
           <div class="portfolio-item__gallery">
             <img src="images/ResidenceAbba/Abba01.JPG" alt="Résidence Abba" />
             <img src="images/ResidenceAbba/Abba02.JPG" alt="Résidence Abba" />
+            <img src="images/ResidenceAbba/Abba01.JPG" alt="Résidence Abba" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
@@ -1967,11 +2002,11 @@
             <p class="portfolio-item__cat">Résidentiel Premium</p>
             <h3 class="portfolio-item__title">Résidence Abba</h3>
             <p class="portfolio-item__year">2024 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
+            <a href="project.html?id=residence-abba" class="portfolio-item__link">Voir le projet →</a>
           </div>
         </div>
 
-        <div class="portfolio-item portfolio-item--large" data-cat="ingenierie">
+        <div class="portfolio-item portfolio-item--large" data-cat="ingenierie" data-project-id="hopital-cure">
           <div class="portfolio-item__gallery">
             <img src="images/HopitalCure/Cure01.JPG" alt="Projet Hôpital CURE" />
             <img src="images/HopitalCure/Cure03.JPG" alt="Projet Hôpital CURE" />
@@ -1991,14 +2026,15 @@
             <h3 class="portfolio-item__title">Projet Hôpital CURE</h3>
             <p class="portfolio-item__lead">Expertise technique · Coordination des travaux · Qualité architecturale</p>
             <p class="portfolio-item__year">2023 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
+            <a href="project.html?id=hopital-cure" class="portfolio-item__link">Voir le projet →</a>
           </div>
         </div>
 
-        <div class="portfolio-item" data-cat="architecture">
+        <div class="portfolio-item" data-cat="architecture" data-project-id="residence-guy">
           <div class="portfolio-item__gallery">
             <img src="images/Residence%20Guy/GUY03.jpeg" alt="Résidence Guy" />
             <img src="images/Residence%20Guy/GUY04.JPG" alt="Résidence Guy" />
+            <img src="images/Residence%20Guy/GUY03.jpeg" alt="Résidence Guy" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
@@ -2015,14 +2051,15 @@
             <p class="portfolio-item__cat">Architecture · Résidentiel</p>
             <h3 class="portfolio-item__title">Résidence Guy</h3>
             <p class="portfolio-item__year">2023 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
+            <a href="project.html?id=residence-guy" class="portfolio-item__link">Voir le projet →</a>
           </div>
         </div>
 
-        <div class="portfolio-item" data-cat="architecture">
+        <div class="portfolio-item" data-cat="architecture" data-project-id="salle-classe-fssp">
           <div class="portfolio-item__gallery">
-            <img src="images/Ecole/Ecole02.jpg" alt="Salle de Classe en Matériaux Locaux – FSSP" />
-            <img src="images/Ecole/Ecole01.JPG" alt="Salle de Classe en Matériaux Locaux – FSSP" />
+            <img src="images/FSSP/FSSP01.JPG" alt="Salle de Classe en Matériaux Locaux – FSSP" />
+            <img src="images/FSSP/FSSP02.JPG" alt="Salle de Classe en Matériaux Locaux – FSSP" />
+            <img src="images/FSSP/FSSP03.JPG" alt="Salle de Classe en Matériaux Locaux – FSSP" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
@@ -2039,16 +2076,14 @@
             <p class="portfolio-item__cat">Architecture · Éducation</p>
             <h3 class="portfolio-item__title">Salle de Classe en Matériaux Locaux – FSSP</h3>
             <p class="portfolio-item__year">2025 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
+            <a href="project.html?id=salle-classe-fssp" class="portfolio-item__link">Voir le projet →</a>
           </div>
         </div>
       </div>
 
       <div style="text-align:center; margin-top:48px;" class="reveal">
-        <a href="#portfolio" class="btn btn--outline-dark">Voir toutes les réalisations →</a>
+        <a href="realisations.html" class="btn btn--outline-dark">Voir toutes les réalisations →</a>
       </div>
-    </div>
-  </section>
 
   <!-- ============================================
        STATS

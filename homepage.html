@@ -940,6 +940,37 @@
         repeating-linear-gradient(45deg, rgba(244,235,208,0.04) 0px, rgba(244,235,208,0.04) 1px, transparent 1px, transparent 24px);
     }
 
+    .portfolio-item__gallery {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 2px;
+    }
+
+    .portfolio-item__gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .portfolio-item__gallery img:nth-child(1) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+
+    .portfolio-item__gallery img:nth-child(2) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    .portfolio-item__gallery img:nth-child(3) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
     /* Architectural line drawing simulation */
     .portfolio-item__arch {
       position: absolute;
@@ -1898,155 +1929,7 @@
         </div>
       </div>
 
-      <div class="portfolio__grid reveal">
-        <div class="portfolio-item portfolio-item--large" data-cat="architecture">
-          <div class="portfolio-item__gallery">
-            <img src="images/Ecole/Ecole01.JPG" alt="École moderne - AURBIC SCP" />
-            <img src="images/Ecole/Ecole02.jpg" alt="École moderne - AURBIC SCP" />
-          </div>
-          <div class="portfolio-item__pattern"></div>
-          <div class="portfolio-item__arch">
-            <svg viewBox="0 0 200 200" fill="none">
-              <rect x="20" y="80" width="160" height="100" stroke="rgba(244,235,208,0.6)" stroke-width="1"/>
-              <path d="M20 80 L100 20 L180 80" stroke="rgba(244,235,208,0.6)" stroke-width="1"/>
-              <rect x="80" y="120" width="40" height="60" stroke="rgba(244,235,208,0.4)" stroke-width="0.8"/>
-              <rect x="35" y="100" width="35" height="40" stroke="rgba(244,235,208,0.4)" stroke-width="0.8"/>
-              <rect x="130" y="100" width="35" height="40" stroke="rgba(244,235,208,0.4)" stroke-width="0.8"/>
-            </svg>
-          </div>
-          <div class="portfolio-item__overlay"></div>
-          <div class="portfolio-item__info">
-            <p class="portfolio-item__cat">Architecture · Institutionnel</p>
-            <h3 class="portfolio-item__title">École moderne de Niamey</h3>
-            <p class="portfolio-item__year">2023 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-cat="urbanisme">
-          <div class="portfolio-item__gallery">
-            <img src="images/Internat%20des%20jeunes%20filles/Inter01.jpeg" alt="Internat des jeunes filles" />
-            <img src="images/Internat%20des%20jeunes%20filles/Inter02.jpg" alt="Internat des jeunes filles" />
-          </div>
-          <div class="portfolio-item__pattern"></div>
-          <div class="portfolio-item__arch">
-            <svg viewBox="0 0 120 120" fill="none">
-              <rect x="10" y="10" width="100" height="100" stroke="rgba(244,235,208,0.5)" stroke-width="1"/>
-              <line x1="10" y1="43" x2="110" y2="43" stroke="rgba(244,235,208,0.3)" stroke-width="0.6"/>
-              <line x1="10" y1="77" x2="110" y2="77" stroke="rgba(244,235,208,0.3)" stroke-width="0.6"/>
-              <line x1="43" y1="10" x2="43" y2="110" stroke="rgba(244,235,208,0.3)" stroke-width="0.6"/>
-              <line x1="77" y1="10" x2="77" y2="110" stroke="rgba(244,235,208,0.3)" stroke-width="0.6"/>
-              <circle cx="60" cy="60" r="15" stroke="rgba(139,69,19,0.8)" stroke-width="1"/>
-            </svg>
-          </div>
-          <div class="portfolio-item__overlay"></div>
-          <div class="portfolio-item__info">
-            <p class="portfolio-item__cat">Éducation · Internat</p>
-            <h3 class="portfolio-item__title">Internat des jeunes filles</h3>
-            <p class="portfolio-item__year">2024 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-cat="architecture">
-          <div class="portfolio-item__gallery">
-            <img src="images/ResidenceAbba/Abba01.JPG" alt="Résidence Abba" />
-            <img src="images/ResidenceAbba/Abba02.JPG" alt="Résidence Abba" />
-          </div>
-          <div class="portfolio-item__pattern"></div>
-          <div class="portfolio-item__arch">
-            <svg viewBox="0 0 120 120" fill="none">
-              <path d="M20 100 L20 50 L60 20 L100 50 L100 100" stroke="rgba(244,235,208,0.6)" stroke-width="1"/>
-              <rect x="45" y="70" width="30" height="30" stroke="rgba(244,235,208,0.4)" stroke-width="0.8"/>
-              <rect x="28" y="65" width="20" height="22" stroke="rgba(244,235,208,0.3)" stroke-width="0.6"/>
-              <rect x="72" y="65" width="20" height="22" stroke="rgba(244,235,208,0.3)" stroke-width="0.6"/>
-            </svg>
-          </div>
-          <div class="portfolio-item__overlay"></div>
-          <div class="portfolio-item__info">
-            <p class="portfolio-item__cat">Résidentiel Premium</p>
-            <h3 class="portfolio-item__title">Résidence Abba</h3>
-            <p class="portfolio-item__year">2024 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
-          </div>
-        </div>
-
-        <div class="portfolio-item portfolio-item--large" data-cat="ingenierie">
-          <div class="portfolio-item__gallery">
-            <img src="images/HopitalCure/Cure01.JPG" alt="Projet Hôpital CURE" />
-            <img src="images/HopitalCure/Cure03.JPG" alt="Projet Hôpital CURE" />
-            <img src="images/HopitalCure/Cure02.JPG" alt="Projet Hôpital CURE" />
-          </div>
-          <div class="portfolio-item__pattern"></div>
-          <div class="portfolio-item__arch">
-            <svg viewBox="0 0 200 140" fill="none">
-              <rect x="20" y="60" width="160" height="70" stroke="rgba(244,235,208,0.6)" stroke-width="1"/>
-              <path d="M20 60 L100 20 L180 60" stroke="rgba(244,235,208,0.6)" stroke-width="1"/>
-              <rect x="80" y="100" width="40" height="40" stroke="rgba(244,235,208,0.4)" stroke-width="0.8"/>
-            </svg>
-          </div>
-          <div class="portfolio-item__overlay"></div>
-          <div class="portfolio-item__info">
-            <p class="portfolio-item__cat">Santé · Infrastructure</p>
-            <h3 class="portfolio-item__title">Projet Hôpital CURE</h3>
-            <p class="portfolio-item__lead">Expertise technique · Coordination des travaux · Qualité architecturale</p>
-            <p class="portfolio-item__year">2023 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-cat="architecture">
-          <div class="portfolio-item__gallery">
-            <img src="images/Residence%20Guy/GUY03.jpeg" alt="Résidence Guy" />
-            <img src="images/Residence%20Guy/GUY04.JPG" alt="Résidence Guy" />
-          </div>
-          <div class="portfolio-item__pattern"></div>
-          <div class="portfolio-item__arch">
-            <svg viewBox="0 0 120 80" fill="none">
-              <rect x="10" y="20" width="100" height="50" stroke="rgba(244,235,208,0.5)" stroke-width="1"/>
-              <rect x="20" y="30" width="20" height="25" stroke="rgba(244,235,208,0.3)" stroke-width="0.7"/>
-              <rect x="50" y="30" width="20" height="25" stroke="rgba(244,235,208,0.3)" stroke-width="0.7"/>
-              <rect x="80" y="30" width="20" height="25" stroke="rgba(244,235,208,0.3)" stroke-width="0.7"/>
-              <line x1="10" y1="20" x2="110" y2="20" stroke="rgba(139,69,19,0.6)" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="portfolio-item__overlay"></div>
-          <div class="portfolio-item__info">
-            <p class="portfolio-item__cat">Architecture · Résidentiel</p>
-            <h3 class="portfolio-item__title">Résidence Guy</h3>
-            <p class="portfolio-item__year">2023 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
-          </div>
-        </div>
-
-        <div class="portfolio-item" data-cat="architecture">
-          <div class="portfolio-item__gallery">
-            <img src="images/Ecole/Ecole02.jpg" alt="Salle de Classe en Matériaux Locaux – FSSP" />
-            <img src="images/Ecole/Ecole01.JPG" alt="Salle de Classe en Matériaux Locaux – FSSP" />
-          </div>
-          <div class="portfolio-item__pattern"></div>
-          <div class="portfolio-item__arch">
-            <svg viewBox="0 0 120 80" fill="none">
-              <rect x="10" y="20" width="100" height="50" stroke="rgba(244,235,208,0.5)" stroke-width="1"/>
-              <rect x="20" y="30" width="20" height="25" stroke="rgba(244,235,208,0.3)" stroke-width="0.7"/>
-              <rect x="50" y="30" width="20" height="25" stroke="rgba(244,235,208,0.3)" stroke-width="0.7"/>
-              <rect x="80" y="30" width="20" height="25" stroke="rgba(244,235,208,0.3)" stroke-width="0.7"/>
-              <line x1="10" y1="20" x2="110" y2="20" stroke="rgba(139,69,19,0.6)" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="portfolio-item__overlay"></div>
-          <div class="portfolio-item__info">
-            <p class="portfolio-item__cat">Architecture · Éducation</p>
-            <h3 class="portfolio-item__title">Salle de Classe en Matériaux Locaux – FSSP</h3>
-            <p class="portfolio-item__year">2025 · Niamey, Niger</p>
-            <a href="#" class="portfolio-item__link">Voir le projet →</a>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align:center; margin-top:48px;" class="reveal">
-        <a href="#portfolio" class="btn btn--outline-dark">Voir toutes les réalisations →</a>
-      </div>
+      <div id="projects-preview" class="reveal"></div>
     </div>
   </section>
 
