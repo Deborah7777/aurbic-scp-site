@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Réalisations — AURBIC SCP</title>
+  <meta name="description" content="Découvrez les projets réalisés par AURBIC SCP en architecture, urbanisme et ingénierie au Niger et en Afrique." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="realisations.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVBAR
+  ============================================= -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        AURBIC SCP
+        <span>Architecture · Urbanisme · Ingénierie</span>
+      </a>
+
+      <ul class="navbar__links">
+        <li><a href="index.html#cabinet">Le Cabinet</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="index.html#actualites">Actualités</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <button class="btn navbar__cta" onclick="window.location.href='index.html#contact'">
+        Devis gratuit
+      </button>
+
+      <button class="navbar__burger" id="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO
+  ============================================= -->
+  <section class="hero-rea">
+    <div class="hero-rea__bg"></div>
+    <div class="hero-rea__grid"></div>
+    <div class="container">
+      <div class="hero-rea__content">
+        <div class="hero-rea__text">
+          <h1 class="hero-rea__title">Nos Réalisations</h1>
+          <p class="hero-rea__subtitle">150+ projets d'architecture, d'urbanisme et d'ingénierie réalisés au Niger et en Afrique subsaharienne.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FILTERS & SEARCH
+  ============================================= -->
+  <section class="realisations">
+    <div class="container">
+      <div class="realisations__controls">
+        <div class="realisations__search">
+          <input type="text" id="search-input" placeholder="Rechercher un projet..." class="search-input" />
+        </div>
+
+        <div class="realisations__filters">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="architecture">Architecture</button>
+          <button class="filter-btn" data-filter="urbanisme">Urbanisme</button>
+          <button class="filter-btn" data-filter="ingenierie">Ingénierie</button>
+          <button class="filter-btn" data-filter="residentiel">Résidentiel</button>
+          <button class="filter-btn" data-filter="institutionnel">Institutionnel</button>
+        </div>
+      </div>
+
+      <!-- PROJECTS GRID -->
+      <div class="realisations__grid" id="projects-grid">
+        <!-- Les cartes seront générées par realisations.js -->
+      </div>
+
+      <!-- LOAD MORE BUTTON -->
+      <div class="realisations__load-more">
+        <button class="btn btn--outline-dark" id="load-more-btn">Charger plus de projets →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MODAL DÉTAIL PROJET
+  ============================================= -->
+  <div class="modal" id="project-modal">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modal-close">✕</button>
+      <div class="modal__inner" id="modal-inner">
+        <!-- Le contenu sera généré par realisations.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <div>
+          <div class="footer__brand-logo">AURBIC SCP</div>
+          <div class="footer__brand-sub">Architecture · Urbanisme · Ingénierie</div>
+          <p class="footer__brand-desc">Cabinet nigérien d'excellence fondé en 2007, spécialisé dans la conception architecturale, l'urbanisme et l'ingénierie BTP.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">f</a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">ig</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Navigation</p>
+          <ul class="footer__col-links">
+            <li><a href="index.html#cabinet">Le Cabinet</a></li>
+            <li><a href="index.html#services">Nos Services</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="index.html#actualites">Actualités</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Services</p>
+          <ul class="footer__col-links">
+            <li><a href="#">Architecture</a></li>
+            <li><a href="#">Urbanisme</a></li>
+            <li><a href="#">Ingénierie</a></li>
+            <li><a href="#">Coordination BTP</a></li>
+            <li><a href="#">Expertise & Conseil</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">📍</span>
+            <span class="footer__contact-text">Plateau, Rue du Sahel<br>Niamey, Niger</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">✉</span>
+            <span class="footer__contact-text">contact@aurbic.ne</span>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">☎</span>
+            <span class="footer__contact-text">+227 00 00 00 00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 AURBIC SCP — Tous droits réservés</p>
+        <div class="footer__legal">
+          <a href="#">Mentions légales</a>
+          <a href="#">Confidentialité</a>
+          <a href="#">Plan du site</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="realisations.js"></script>
+</body>
+</html>
