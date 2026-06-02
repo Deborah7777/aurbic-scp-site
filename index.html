@@ -641,6 +641,186 @@
       gap: 20px;
     }
 
+    .founder-note {
+      background: rgba(244,235,208,0.08);
+      padding: 100px 0;
+    }
+
+    .founder-note__header {
+      max-width: 700px;
+      margin-bottom: 36px;
+    }
+
+    .founder-note__header .section-title {
+      color: var(--choco);
+      margin-bottom: 18px;
+    }
+
+    .founder-note__header .section-subtitle {
+      color: rgba(60,42,33,0.82);
+      font-size: 15px;
+      line-height: 1.95;
+      font-weight: 300;
+      max-width: 680px;
+    }
+
+    .founder-note__grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .founder-note__photo {
+      border-radius: 28px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(244,235,208,0.16), rgba(60,42,33,0.06));
+      box-shadow: 0 36px 100px rgba(60,42,33,0.08);
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .founder-note__photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      color: rgba(244,235,208,0.68);
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      text-align: center;
+      border: 1px dashed rgba(244,235,208,0.35);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .founder-note__content {
+      display: grid;
+      gap: 24px;
+    }
+
+    .founder-note__card {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(139,69,19,0.12);
+      border-radius: 24px;
+      padding: 34px;
+      color: var(--choco);
+      line-height: 1.9;
+    }
+
+    .founder-note__card p {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    .founder-note__points {
+      display: grid;
+      gap: 18px;
+    }
+
+    .founder-note__point {
+      background: var(--cream);
+      border: 1px solid rgba(139,69,19,0.12);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .founder-note__point h3 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--brick);
+      font-weight: 600;
+    }
+
+    .founder-note__point p {
+      margin: 0;
+      color: rgba(60,42,33,0.86);
+      font-size: 14px;
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .earth-benefits {
+      background: var(--cream);
+      padding: 100px 0;
+    }
+
+    .earth-benefits__header {
+      max-width: 680px;
+      margin-bottom: 42px;
+    }
+
+    .earth-benefits__header .section-title {
+      color: var(--choco);
+      margin-bottom: 18px;
+    }
+
+    .earth-benefits__header .section-subtitle {
+      color: rgba(60,42,33,0.82);
+      font-size: 15px;
+      line-height: 1.85;
+      font-weight: 300;
+      max-width: 680px;
+    }
+
+    .earth-benefits__grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .impact-card {
+      background: rgba(60,42,33,0.05);
+      border: 1px solid rgba(139,69,19,0.12);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 24px 70px rgba(60,42,33,0.06);
+      transition: transform 0.3s var(--ease-out), border-color 0.3s ease;
+    }
+
+    .impact-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(139,69,19,0.2);
+    }
+
+    .impact-card__icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: rgba(244,235,208,0.2);
+      margin-bottom: 20px;
+    }
+
+    .impact-card__icon svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--brick);
+    }
+
+    .impact-card h3 {
+      margin: 0 0 12px;
+      color: var(--choco);
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    .impact-card p {
+      margin: 0;
+      color: rgba(60,42,33,0.82);
+      font-size: 14px;
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
     .value-item {
       border-left: 2px solid var(--brick);
       padding-left: 16px;
@@ -1355,6 +1535,8 @@
       .about-strip__inner { grid-template-columns: 1fr; gap: 40px; }
       .about-strip__info { grid-template-columns: 1fr; }
       .about-strip__values { grid-template-columns: 1fr; }
+      .founder-note__grid { grid-template-columns: 1fr; }
+      .earth-benefits__grid { grid-template-columns: 1fr; }
 
       .portfolio { padding: 72px 0; }
       .portfolio__grid { grid-template-columns: 1fr; }
@@ -1658,6 +1840,109 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FONDATEUR
+  ============================================= -->
+  <section class="founder-note" id="fondateur">
+    <div class="container">
+      <div class="founder-note__header reveal">
+        <span class="section-tag">Mot du Fondateur</span>
+        <h2 class="section-title">Abba Moussa Souleymane</h2>
+        <p class="section-subtitle">Fondateur d’AURBIC SCP, il porte une vision claire d'une architecture sahélienne durable, accessible et profondément enracinée dans les savoir-faire locaux.</p>
+      </div>
+      <div class="founder-note__grid reveal">
+        <div class="founder-note__photo">
+          <div class="founder-note__photo-placeholder">
+            Photo du fondateur
+          </div>
+        </div>
+        <div class="founder-note__content">
+          <div class="founder-note__card">
+            <p>Architecte et urbaniste chevronné, Abba Moussa Souleymane a fondé AURBIC SCP sur l'idée que chaque projet doit répondre au climat, à la culture et aux communautés du Niger. Sa démarche professionnelle allie rigueur technique, élégance formelle et engagement social.</p>
+          </div>
+          <div class="founder-note__points">
+            <div class="founder-note__point">
+              <h3>Vision</h3>
+              <p>Construire des espaces durables qui réinventent l'architecture en terre pour en faire une référence moderne, responsable et inspirante en Afrique.</p>
+            </div>
+            <div class="founder-note__point">
+              <h3>Engagement</h3>
+              <p>Il place la valorisation des matériaux locaux et l'adaptation aux conditions sahéliennes au cœur de chaque conception.</p>
+            </div>
+            <div class="founder-note__point">
+              <h3>Ambition</h3>
+              <p>Faire du Niger un laboratoire de développement urbain et d'architecture accessible, créatrice de valeur pour les territoires et les familles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHY EARTH BUILDING
+  ============================================= -->
+  <section class="earth-benefits" id="terre">
+    <div class="container">
+      <div class="earth-benefits__header reveal">
+        <span class="section-tag">Pourquoi construire en terre ?</span>
+        <h2 class="section-title">Avantages naturels pour le climat sahélien</h2>
+        <p class="section-subtitle">L'architecture en terre offre une performance thermique, des économies énergétiques et une durabilité renforcée tout en valorisant les ressources locales.</p>
+      </div>
+      <div class="earth-benefits__grid reveal">
+        <article class="impact-card">
+          <div class="impact-card__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 16a1 1 0 1 1-2 0v-4H8a1 1 0 0 1 0-2h3V6a1 1 0 0 1 2 0v6h3a1 1 0 0 1 0 2h-3Z"/></svg>
+          </div>
+          <h3>Excellente isolation thermique</h3>
+          <p>La terre régule naturellement les écarts de température, gardant l’intérieur frais le jour et tempéré la nuit.</p>
+        </article>
+        <article class="impact-card">
+          <div class="impact-card__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L4 8v8l8 5 8-5V8Zm0 2.18 5.66 3.34L12 12.86 6.34 8.52Zm0 11.64-5.66-3.34V10.24l5.66 3.34 5.66-3.34v3.24Z"/></svg>
+          </div>
+          <h3>Réduction de la chaleur intérieure</h3>
+          <p>Les murs en terre absorbent et restituent lentement la chaleur, réduisant l’accumulation de température à l’intérieur.</p>
+        </article>
+        <article class="impact-card">
+          <div class="impact-card__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12a1 1 0 0 1 1-1h2V8a1 1 0 0 1 2 0v3h2V8a1 1 0 0 1 2 0v3h2a1 1 0 0 1 0 2h-2v3a1 1 0 0 1-2 0v-3h-2v3a1 1 0 0 1-2 0v-3H6a1 1 0 0 1-1-1Z"/></svg>
+          </div>
+          <h3>Réduction des coûts énergétiques</h3>
+          <p>Une isolation performante signifie moins de besoins en climatisation et donc des factures énergétiques plus basses.</p>
+        </article>
+        <article class="impact-card">
+          <div class="impact-card__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5Z"/></svg>
+          </div>
+          <h3>Respect de l'environnement</h3>
+          <p>La construction en terre minimise l'empreinte carbone grâce à des matériaux naturels, peu transformés et locaux.</p>
+        </article>
+        <article class="impact-card">
+          <div class="impact-card__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5Zm4-4h6v-2H9Zm-2-4h10v-2H7Zm1-4h8V6H8Z"/></svg>
+          </div>
+          <h3>Utilisation de ressources locales</h3>
+          <p>La terre et les matériaux du site réduisent les transports et renforcent l’économie territoriale.</p>
+        </article>
+        <article class="impact-card">
+          <div class="impact-card__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 9v12h16V9Zm0 2.18 5.66 3.34L12 12.86 6.34 8.52ZM6 19V10.8l5.42 3.2a1 1 0 0 0 .88 0L18 10.8V19Z"/></svg>
+          </div>
+          <h3>Durabilité élevée</h3>
+          <p>Les constructions en terre bien conçues durent des décennies avec une maintenance limitée.</p>
+        </article>
+        <article class="impact-card">
+          <div class="impact-card__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l-4 4h3v6h2V6h3Zm7 7h-3v7H8v-7H5l7-7 7 7Z"/></svg>
+          </div>
+          <h3>Adaptation au climat sahélien</h3>
+          <p>La terre est un matériau parfaitement adapté aux cycles de chaleur et de fraîcheur du Sahel.</p>
+        </article>
       </div>
     </div>
   </section>
