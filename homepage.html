@@ -577,6 +577,64 @@
       margin-bottom: 36px;
     }
 
+    .about-strip__info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .info-card {
+      background: rgba(244,235,208,0.05);
+      border: 1px solid rgba(244,235,208,0.12);
+      border-radius: 18px;
+      padding: 24px;
+      min-height: 150px;
+    }
+
+    .info-card__title {
+      color: var(--sand);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .info-card__text {
+      color: rgba(244,235,208,0.65);
+      font-size: 13px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .info-card__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .info-card__list li {
+      position: relative;
+      padding-left: 22px;
+      color: rgba(244,235,208,0.65);
+      font-size: 13px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .info-card__list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--terracotta);
+      font-size: 16px;
+      line-height: 1;
+    }
+
     .about-strip__values {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1295,6 +1353,8 @@
       .services__grid { grid-template-columns: 1fr; }
 
       .about-strip__inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-strip__info { grid-template-columns: 1fr; }
+      .about-strip__values { grid-template-columns: 1fr; }
 
       .portfolio { padding: 72px 0; }
       .portfolio__grid { grid-template-columns: 1fr; }
@@ -1512,6 +1572,30 @@
           <p class="about-strip__body">
             Fondé à Niamey en 2007, AURBIC SCP rassemble des architectes, urbanistes et ingénieurs nigériens et internationaux unis par une même conviction : bâtir mieux, pour plus de dignité, d'efficacité et de durabilité sur notre continent.
           </p>
+          <div class="about-strip__info">
+            <div class="info-card">
+              <div class="info-card__title">Entreprise</div>
+              <div class="info-card__text">AURBIC SCP – Cabinet d'Architecture, d'Urbanisme, d'Ingénierie et de Coordination.</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card__title">Fondateur</div>
+              <div class="info-card__text">Abba Moussa Souleymane.</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card__title">Mission</div>
+              <ul class="info-card__list">
+                <li>Valoriser les matériaux locaux.</li>
+                <li>Développer des bâtiments adaptés au climat sahélien.</li>
+                <li>Promouvoir une architecture durable.</li>
+                <li>Réduire les coûts de construction.</li>
+                <li>Contribuer au développement local.</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="info-card__title">Vision</div>
+              <div class="info-card__text">Faire de l'architecture en terre une référence moderne, durable et accessible au Niger et en Afrique.</div>
+            </div>
+          </div>
           <div class="about-strip__values">
             <div class="value-item">
               <div class="value-item__title">Excellence</div>
@@ -1526,8 +1610,16 @@
               <div class="value-item__desc">Architecture bioclimatique et éco-responsable.</div>
             </div>
             <div class="value-item">
-              <div class="value-item__title">Proximité</div>
-              <div class="value-item__desc">Un suivi personnalisé tout au long du projet.</div>
+              <div class="value-item__title">Qualité</div>
+              <div class="value-item__desc">Des réalisations durables, précises et finies avec soin.</div>
+            </div>
+            <div class="value-item">
+              <div class="value-item__title">Responsabilité sociale</div>
+              <div class="value-item__desc">Des projets qui renforcent les communautés locales.</div>
+            </div>
+            <div class="value-item">
+              <div class="value-item__title">Respect de l'environnement</div>
+              <div class="value-item__desc">Conception consciente pour un impact réduit.</div>
             </div>
           </div>
         </div>
