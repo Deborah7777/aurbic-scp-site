@@ -715,9 +715,6 @@
       background: linear-gradient(180deg, rgba(161,88,67,0.15), rgba(139,69,19,0.1));
       box-shadow: 0 36px 100px rgba(60,42,33,0.08);
       min-height: 560px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       position: relative;
       transition: all var(--transition);
     }
@@ -728,6 +725,13 @@
       inset: 0;
       background: radial-gradient(circle at 30% 30%, rgba(244,235,208,0.2), transparent);
       pointer-events: none;
+    }
+
+    .founder-note__photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .founder-note__photo-placeholder {
@@ -1678,16 +1682,16 @@
 
       <div class="hero__stats reveal" style="transition-delay:0.2s">
         <div class="hero__stat">
-          <div class="hero__stat-num">150+</div>
+          <div class="hero__stat-num">50+</div>
           <div class="hero__stat-label">Projets réalisés</div>
         </div>
         <div class="hero__stat">
-          <div class="hero__stat-num">18</div>
+          <div class="hero__stat-num">29</div>
           <div class="hero__stat-label">Années d'expertise</div>
         </div>
         <div class="hero__stat">
-          <div class="hero__stat-num">12</div>
-          <div class="hero__stat-label">Pays d'intervention</div>
+          <div class="hero__stat-num">8</div>
+          <div class="hero__stat-label">Régions d'intervention</div>
         </div>
       </div>
     </div>
@@ -1930,22 +1934,7 @@
       </div>
       <div class="founder-note__grid reveal">
         <div class="founder-note__photo">
-          <div class="founder-note__photo-placeholder">
-            <div class="founder-note__photo-inner">
-              <svg class="founder-note__photo-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <!-- Head -->
-                <circle cx="100" cy="60" r="30" fill="#A15843"/>
-                <!-- Body -->
-                <rect x="75" y="95" width="50" height="60" rx="10" fill="#8B4513"/>
-                <!-- Arms -->
-                <rect x="35" y="105" width="40" height="15" rx="7" fill="#A15843"/>
-                <rect x="125" y="105" width="40" height="15" rx="7" fill="#A15843"/>
-                <!-- Accent lines -->
-                <line x1="85" y1="120" x2="115" y2="120" stroke="#F4EBD0" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <p>Photo du fondateur</p>
-            </div>
-          </div>
+          <img src="images/fondateur.jpg" alt="Photo d'Abba Moussa Souleymane" class="founder-note__photo-img" />
         </div>
         <div class="founder-note__content">
           <div class="founder-note__card">
@@ -2072,8 +2061,8 @@
         <div class="portfolio-item" data-cat="urbanisme" data-project-id="internat-jeunes-filles">
           <div class="portfolio-item__gallery">
             <img src="images/Internat%20des%20jeunes%20filles/Inter01.jpeg" alt="Internat des jeunes filles" />
-            <img src="images/Internat%20des%20jeunes%20filles/Inter02.jpg" alt="Internat des jeunes filles" />
-            <img src="images/Internat%20des%20jeunes%20filles/Inter03.jpeg" alt="Internat des jeunes filles" />
+            <img src="images/Internat%20des%20jeunes%20filles/Inter29.jpg" alt="Internat des jeunes filles" />
+            <img src="images/Internat%20des%20jeunes%20filles/Inter38.jpeg" alt="Internat des jeunes filles" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
@@ -2099,7 +2088,7 @@
           <div class="portfolio-item__gallery">
             <img src="images/Gueno/Gueno01.JPG" alt="Villa Guenola" />
             <img src="images/Gueno/Gueno02.JPG" alt="Villa Guenola" />
-            <img src="images/Gueno/Gueno01.JPG" alt="Villa Guenola" />
+            <img src="images/Gueno/Gueno03.JPG" alt="Villa Guenola" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
@@ -2123,7 +2112,7 @@
           <div class="portfolio-item__gallery">
             <img src="images/ResidenceAbba/Abba01.JPG" alt="Résidence Abba" />
             <img src="images/ResidenceAbba/Abba02.JPG" alt="Résidence Abba" />
-            <img src="images/ResidenceAbba/Abba01.JPG" alt="Résidence Abba" />
+            <img src="images/ResidenceAbba/Abba03.JPG" alt="Résidence Abba" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
@@ -2138,7 +2127,7 @@
           <div class="portfolio-item__info">
             <p class="portfolio-item__cat">Résidentiel Premium</p>
             <h3 class="portfolio-item__title">Résidence Abba</h3>
-            <p class="portfolio-item__year">2024 · Niamey, Niger</p>
+            <p class="portfolio-item__year">2005 · Niamey, Niger</p>
             <a href="project.html?id=residence-abba" class="portfolio-item__link">Voir le projet →</a>
           </div>
         </div>
@@ -2162,7 +2151,7 @@
             <p class="portfolio-item__cat">Santé · Infrastructure</p>
             <h3 class="portfolio-item__title">Projet Hôpital CURE</h3>
             <p class="portfolio-item__lead">Expertise technique · Coordination des travaux · Qualité architecturale</p>
-            <p class="portfolio-item__year">2023 · Niamey, Niger</p>
+            <p class="portfolio-item__year">2012 · Niamey, Niger</p>
             <a href="project.html?id=hopital-cure" class="portfolio-item__link">Voir le projet →</a>
           </div>
         </div>
@@ -2171,7 +2160,7 @@
           <div class="portfolio-item__gallery">
             <img src="images/Residence%20Guy/GUY03.jpeg" alt="Résidence Guy" />
             <img src="images/Residence%20Guy/GUY04.JPG" alt="Résidence Guy" />
-            <img src="images/Residence%20Guy/GUY03.jpeg" alt="Résidence Guy" />
+            <img src="images/Residence%20Guy/GUY08.jpeg" alt="Résidence Guy" />
           </div>
           <div class="portfolio-item__pattern"></div>
           <div class="portfolio-item__arch">
@@ -2194,7 +2183,7 @@
 
         <div class="portfolio-item" data-cat="architecture" data-project-id="salle-classe-fssp">
           <div class="portfolio-item__gallery">
-            <img src="images/FSSP/fssp.jpg" alt="Salle de Classe en Matériaux Locaux – FSSP" />
+            <img src="images/FSSP/fssp4.jpg" alt="Salle de Classe en Matériaux Locaux – FSSP" />
             <img src="images/FSSP/fssp3.jpg" alt="Salle de Classe en Matériaux Locaux – FSSP" />
             <img src="images/FSSP/fssp5.jpg" alt="Salle de Classe en Matériaux Locaux – FSSP" />
           </div>
